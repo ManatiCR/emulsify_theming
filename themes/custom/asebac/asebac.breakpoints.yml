@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+asebac.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+asebac.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 26em)'
+asebac.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 41em)'
+asebac.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+asebac.large:
+  label: large
+  mediaQuery: 'all and (min-width: 61.25em)'
