@@ -1,0 +1,22 @@
+uuid: 128ef20d-6528-49a5-8f93-3160211bfcad
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - asebac
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: asebac_content
+theme: asebac
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

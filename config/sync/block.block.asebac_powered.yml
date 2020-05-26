@@ -1,0 +1,22 @@
+uuid: ac62fffa-ea24-4a4c-8d3f-01e3990d4477
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - asebac
+_core:
+  default_config_hash: qNQnBkmHpPu6VUYHhWzqsO9tYloYebCrdkleIgJQ_d4
+id: asebac_powered
+theme: asebac
+region: header
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

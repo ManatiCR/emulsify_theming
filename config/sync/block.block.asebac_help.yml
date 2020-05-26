@@ -1,0 +1,22 @@
+uuid: d88f39a9-36c1-4af2-8c95-7b0f3d4240e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - asebac
+_core:
+  default_config_hash: Qs_-Q1au_CUrtRcblYE_BbT90XxmLW1IyxQEqJiRfpk
+id: asebac_help
+theme: asebac
+region: content
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

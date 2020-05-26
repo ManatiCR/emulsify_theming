@@ -1,0 +1,19 @@
+uuid: 497551aa-34f5-4ae6-b1b2-6fe58346e3e1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zsKdM9jReije7aKLDmI7ortGA5EHTpNk1sKASJT1wwc
+name: large_retina
+label: 'Large (480×480 retinafied)'
+effects:
+  efeffc53-6c6e-4cd1-8900-e65825f65caf:
+    uuid: efeffc53-6c6e-4cd1-8900-e65825f65caf
+    id: image_scale
+    weight: 0
+    data:
+      width: 480
+      height: 480
+      upscale: false
+      retinafy: true
+      multiplier: 2

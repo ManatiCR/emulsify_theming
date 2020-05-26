@@ -1,0 +1,21 @@
+uuid: 5a987400-4de9-47ca-9f86-09ab64e827c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_facebook
+    - media.type.facebook_post
+_core:
+  default_config_hash: LvnOhztKJ9uHpyVB8LJIXIlyoyVbMnqyG3N3W9AVBaY
+id: media.facebook_post.field_media_facebook
+field_name: field_media_facebook
+entity_type: media
+bundle: facebook_post
+label: Facebook
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

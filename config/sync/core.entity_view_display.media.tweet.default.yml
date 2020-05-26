@@ -1,0 +1,30 @@
+uuid: 234f350d-c773-4fd8-a3ab-7d56959b309a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.field_media_twitter
+    - media.type.tweet
+  module:
+    - media_entity_twitter
+_core:
+  default_config_hash: C8gMgg_OBf2u6-Fb7b9Qa1yvdYtjzyr8XvfVqIQZubI
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  field_media_twitter:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: twitter_embed
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

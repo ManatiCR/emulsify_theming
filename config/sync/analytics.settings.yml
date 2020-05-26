@@ -1,0 +1,7 @@
+privacy:
+  dnt: true
+  anonymize_ip: false
+cache_urls: false
+disable_page_build: false
+_core:
+  default_config_hash: LxsKDlTLVZzxV_cwDznRu1g1GUXmcc7njR4GxKMOP_w
