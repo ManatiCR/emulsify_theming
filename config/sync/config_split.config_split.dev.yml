@@ -1,0 +1,22 @@
+uuid: d7c2e12a-9677-4c5a-8599-2d5eb632e4e9
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: pCHVzdcClu2NW6h3v_mck2loExmXe5W8fjt7q21im3k
+id: dev
+label: Dev
+description: ''
+folder: sites/default/config/dev
+module:
+  devel: 0
+  field_ui: 0
+  kint: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - core.extension
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

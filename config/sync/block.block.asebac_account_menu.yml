@@ -1,0 +1,27 @@
+uuid: 5a796e6e-1dc7-4d23-a68b-ad453494bd58
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - asebac
+_core:
+  default_config_hash: Ojhrvx_PDOTg-kqy9JWNJ8J1fp7jcPDO3VO178u4knI
+id: asebac_account_menu
+theme: asebac
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

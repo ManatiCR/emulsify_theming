@@ -1,0 +1,11 @@
+uuid: ed8eb3c6-371a-4de4-af37-ec507d21c851
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wujc6CKHjn6isjerzwPx-j6dueX73oFH8HMitaTjhIw
+id: default_bundle
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 0

@@ -37,9 +37,17 @@ commands:
   install:
     usage: Run install commands
     cmd: |
+      SITE_UUID="76e36c46-4662-4a7c-8ced-9873f73604ed"
       ahoy drush cc drush
-      echo "Installing..."
-      ahoy drush site-install trichechus --account-pass=admin --site-name="Emulsify Theming" -y
+      if [ -f ./config/sync/core.extension.yml ]; then
+        echo "Installing with existing config..."
+        ahoy drush site-install trichechus --account-pass=admin --site-name="Emulsify Theming" --config-dir="sites/default/config/sync" -y
+      else
+        echo "Installing the new site..."
+        ahoy drush site-install trichechus --account-pass=admin --site-name="Emulsify Theming" -y
+        echo "Set site uuid..."
+        ahoy drush config-set "system.site" uuid "$SITE_UUID" -y
+      fi
       echo "Cleaning cache..."
       ahoy drush cr
   install-from-db:

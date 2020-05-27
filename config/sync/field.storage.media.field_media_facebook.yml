@@ -1,0 +1,21 @@
+uuid: b59eb123-5758-4584-8027-60dc0aea9532
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: XEWw4evZaAMF-P2pEkioSJyXWSPh3TpoT4MoXSifBvM
+id: media.field_media_facebook
+field_name: field_media_facebook
+entity_type: media
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

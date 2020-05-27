@@ -1,0 +1,20 @@
+uuid: 5751ef9c-d504-4845-8966-6ddd64797359
+langcode: en
+status: true
+dependencies:
+  theme:
+    - asebac
+_core:
+  default_config_hash: E_oQr6AZRU50pqcJpx1N1qGSmWYKFAK0mLcdbQ5FcRM
+id: asebac_page_title
+theme: asebac
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

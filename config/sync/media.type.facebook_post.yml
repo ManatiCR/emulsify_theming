@@ -1,0 +1,17 @@
+uuid: 49bcfcdc-30c4-452b-9305-7c6954c4cd04
+langcode: es
+status: true
+dependencies:
+  module:
+    - media_entity_facebook
+_core:
+  default_config_hash: UV7DBnH6pL7sO81e9G1f4W3CG5Piq0Mptlwnl6UADkU
+id: facebook_post
+label: 'Facebook Post'
+description: ''
+source: facebook
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_facebook
+field_map: {  }

@@ -1,0 +1,15 @@
+name: 'Emulsify Theming'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+mail_notification: ''
+_core:
+  default_config_hash: 4YM9lSypgPnYAXqUzJ0NDLoejuM9oGGMwa8E5GU4LK4
+uuid: 76e36c46-4662-4a7c-8ced-9873f73604ed

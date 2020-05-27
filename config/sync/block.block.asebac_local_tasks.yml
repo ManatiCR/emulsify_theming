@@ -1,0 +1,22 @@
+uuid: 14de6806-d1e5-4857-bae3-d8e3d7e8e231
+langcode: en
+status: true
+dependencies:
+  theme:
+    - asebac
+_core:
+  default_config_hash: SmUN35NaWEQVrC6TESnCQLMO280xy4qUoQB4qxmdwH4
+id: asebac_local_tasks
+theme: asebac
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

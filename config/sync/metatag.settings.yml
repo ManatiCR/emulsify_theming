@@ -1,0 +1,8 @@
+entity_type_groups:
+  node:
+    landing_page:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+_core:
+  default_config_hash: da5hnR8R3N254aAPwQ4ukUL1bDb_F-RvV10THcCTiGg

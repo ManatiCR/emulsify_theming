@@ -1,0 +1,19 @@
+uuid: 9bea89e9-8b95-49c4-acd8-07bf5343c87e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: kWdoEtwdN5M5me01GflbCBKdFQMpxYWR2KKk7Iv6cno
+name: 'Landing page'
+type: landing_page
+description: 'This content type allows to you create custom landing pages on-demand.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

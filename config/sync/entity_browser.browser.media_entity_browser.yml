@@ -1,0 +1,86 @@
+uuid: a308ffb2-41df-46a5-920b-f6d9ac93ce63
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - media
+    - views
+_core:
+  default_config_hash: jsYBgK9ZhoP-ZGZOVMjrgMYumpiMaYaIs9xR6aacl14
+name: media_entity_browser
+label: 'Media Entity Browser'
+display: iframe
+display_configuration:
+  width: '1070'
+  height: '500'
+  link_text: 'Select media'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6586703a-6976-4124-8a49-cbb07ceaa3b1:
+    settings:
+      view: media_entity_browser
+      view_display: media_browser_all
+      submit_text: 'Select media'
+      auto_select: false
+    uuid: 6586703a-6976-4124-8a49-cbb07ceaa3b1
+    weight: -9
+    label: 'Choose existing media'
+    id: view
+  e43a6261-491b-400b-a277-832740af37bd:
+    settings:
+      form_mode: default
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select entities'
+    uuid: e43a6261-491b-400b-a277-832740af37bd
+    weight: -10
+    label: 'Upload new image'
+    id: dropzonejs_media_entity_inline_entity_form
+  18399d8f-424b-4609-9523-aba1075c7ea2:
+    settings:
+      entity_type: media
+      bundle: facebook_post
+      form_mode: default
+      submit_text: 'Embed post'
+    uuid: 18399d8f-424b-4609-9523-aba1075c7ea2
+    weight: -7
+    label: 'Add facebook post'
+    id: entity_form
+  305d23ca-c57c-47a4-9369-50e99047053b:
+    settings:
+      entity_type: media
+      bundle: tweet
+      form_mode: default
+      submit_text: 'Embed tweet'
+    uuid: 305d23ca-c57c-47a4-9369-50e99047053b
+    weight: -6
+    label: 'Add tweet'
+    id: entity_form
+  c74e2588-dde2-4ee0-89b2-6bbcd69fcdcc:
+    settings:
+      entity_type: media
+      bundle: remote_video
+      form_mode: default
+      submit_text: 'Embed video'
+    uuid: c74e2588-dde2-4ee0-89b2-6bbcd69fcdcc
+    weight: -8
+    label: 'Add remote video'
+    id: entity_form

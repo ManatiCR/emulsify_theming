@@ -1,0 +1,22 @@
+uuid: b4a6de37-24f8-440d-a272-3dfed3bf38be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - asebac
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: asebac_messages
+theme: asebac
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 73d670cf-4358-4ae3-b9de-6836269cd812
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fV1JF-IN1R2izwPPfo-mJummbPy-Zag2eo6TfCOksyU
+id: remote_video
+label: 'Remote Video'
+description: ''
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+  source_field: field_media_oembed_video
+field_map:
+  default_name: name
