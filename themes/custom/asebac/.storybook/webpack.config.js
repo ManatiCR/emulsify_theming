@@ -107,5 +107,14 @@ module.exports = async ({ config }) => {
     },
   });
 
+  // File Loader
+  config.module.rules.push({
+    test: /\.(woff|woff2|ttf|eot|otf)$/i,
+    loader: 'file-loader',
+    include: [
+      path.resolve(__dirname, '../', 'fonts')
+    ],
+  });
+
   return config;
 };
