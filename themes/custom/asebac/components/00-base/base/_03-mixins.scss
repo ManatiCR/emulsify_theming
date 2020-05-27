@@ -47,8 +47,16 @@ $outer-container-break: $small;
 }
 
 // Mixin - Standard Margin
-@mixin margin {
-  margin-bottom: 1em;
+@mixin margin-lg {
+  margin: 80px;
+}
+
+@mixin margin-md {
+  margin: 40px;
+}
+
+@mixin margin-sm {
+  margin: 20px;
 }
 
 @mixin no-bottom {

@@ -1,5 +1,9 @@
 items:
-  - name: 'Green'
-    value: 'green'
-  - name: 'Blue'
-    value: 'blue'
+  - name: 'Red'
+    value: 'red'
+  - name: 'Red Light'
+    value: 'red-light'
+  - name: 'Red Light'
+    value: 'red-lighter'
+  - name: 'Red Darker'
+    value: 'red-darker'
