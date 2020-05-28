@@ -1,0 +1,52 @@
+$color-breadcrumb: $red;
+$color-breadcrumb-hover: $red-light;
+$color-breadcrumb-active: $red;
+
+.breadcrumb {
+  @include list-reset;
+}
+
+.breadcrumb__item,
+.breadcrumb__link,
+.breadcrumb__link:link,
+.breadcrumb__link:visited,
+.breadcrumb__link:focus {
+  color: $color-breadcrumb;
+}
+
+.breadcrumb__link:hover {
+  color: $color-breadcrumb-hover;
+  font-weight: normal;
+}
+
+.breadcrumb__item {
+  display: inline-block;
+  font-size: 0.75rem;
+
+  a {
+    text-decoration: underline;
+  }
+
+  &::after {
+    content: '/';
+    display:inline-block;
+    margin-left: 0.1rem;
+  }
+
+  &:last-child {
+    color: $color-breadcrumb-active;
+    font-weight: bold;
+
+    a {
+      text-decoration: none;
+    }
+
+    &::after {
+      content: '';
+    }
+  }
+}
+
+.breadcrumb_link:active {
+  color: $color-breadcrumb-active;
+}
