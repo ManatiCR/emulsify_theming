@@ -1,0 +1,29 @@
+// Storybook styling
+.icons-demo {
+    display: flex;
+  
+    .icon {
+      height: 6.25rem;
+      padding: $space;
+      width: 6.25rem;
+      fill: $gray;
+  
+      &:hover {
+        fill: $white;
+      }
+    }
+  
+    pre {
+      background-color: $near-white;
+      font-size: 0.8rem;
+      margin: 0;
+      text-align: center;
+    }
+  }
+  
+  .icons-demo__item {
+    background-color: $red-darker;
+    border: 1px solid $near-white;
+    margin: $space-one-fourth;
+  }
+  
