@@ -1,0 +1,45 @@
+.pager {
+  margin: 2em 0;
+}
+
+.pager__items {
+  @include list-reset;
+
+  text-align: center;
+}
+
+.pager__item {
+  display: inline-block;
+}
+
+.pager__link,
+.pager__link:link,
+.pager__link:visited {
+  background-color: $gray-lightest;
+  color: $black;
+  padding: $space-one-half $space;
+  text-decoration: none;
+
+  &:hover, &.is-active {
+    background-color: $red;
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    font-weight: normal;
+  }
+
+  &.is-active {
+    font-weight: bold;
+  }
+}
+
+.pager__link.pager__link {
+  &--prev, &--next {
+    &:hover {
+      background-color: $gray-lightest;
+      color: $black;
+    }
+  }
+}
