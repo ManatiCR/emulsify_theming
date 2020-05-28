@@ -1,0 +1,74 @@
+@mixin button(
+  $bg: $white,
+  $color: $red,
+  $hoverBg: $red,
+  $hoverColor: $white
+) {
+  background-color: $bg;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: $space-one-half 1.25rem;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.2rem;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    background-color: $hoverBg;
+    color: $hoverColor;
+  }
+  
+  i &__icon {
+    height: 0.9rem;
+    width: 0.9rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@mixin button-alt {
+  @include button($red, $white, $red-lighter);
+}
+
+@mixin button-outline {
+  @include button($red, $red, $red, $white);
+
+  background-color: transparent;
+  border: 2px solid $red;
+}
+
+@mixin button-download {
+  @include button($gray, $white, $red-darker, $white);
+}
+
+@mixin button-link {
+  @include button($white, $red, $white, $red-light);
+
+  text-decoration: underline;
+}
+
+.button {
+  @include button;
+
+  &--alt {
+    @include button;
+    @include button-alt;
+  }
+
+  &--outline {
+    @include button-outline;
+  }
+
+  &--download {
+    @include button-download;
+  }
+
+  &--link {
+    @include button-link;
+  }
+}
