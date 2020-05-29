@@ -21,7 +21,7 @@ $color-breadcrumb-active: $red;
 
 .breadcrumb__item {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: $font-medium;
 
   a {
     text-decoration: underline;
