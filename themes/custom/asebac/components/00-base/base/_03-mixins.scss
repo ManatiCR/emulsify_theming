@@ -45,26 +45,48 @@ $outer-container-break: $small;
     );
   }
 }
-
-// Mixin - Standard Margin
-@mixin margin-lg {
-  margin: 80px;
-}
-
-@mixin margin-md {
-  margin: 40px;
-}
-
-@mixin margin-sm {
-  margin: 20px;
-}
-
-@mixin no-bottom {
-  margin-bottom: 0;
-}
-
+//Mixin List Reset
 @mixin list-reset {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// Mixin - Margins
+
+/** Usage Example:
+@include margin-lg (
+  $side: (top, bottom)
+);
+**/
+@mixin margin-lg($side) {
+  @each $side in $side {
+    margin-#{$side}: 3.75rem;
+
+    @include medium {
+      margin-#{$side}: 5rem;
+    }
+  }
+}
+
+@mixin margin-md($side) {
+  @each $side in $side {
+    margin-#{$side}: 2.5rem;
+  }
+}
+
+@mixin margin-sm($side) {
+  @each $side in $side {
+    margin-#{$side}: 1.25rem;
+  }
+}
+
+@mixin margin-xs($side) {
+  @each $side in $side {
+    margin-#{$side}: 0.62rem;
+  }
+}
+
+@mixin no-bottom {
+  margin-bottom: 0;
 }
