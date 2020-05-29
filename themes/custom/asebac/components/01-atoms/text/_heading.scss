@@ -1,0 +1,103 @@
+/*
+ * Generic header styles:
+ * All arguments are optional. If not defined, the defaults below will be used
+*/
+
+$color-heading: $gray-darker;
+
+@mixin heading-xl(
+  $font-size: 1.5rem,
+  $line-height: 1.7rem,
+  $font-size: 1.8rem,
+  $line-height: 2rem,
+  $color: $color-heading,
+  $color-link: inherit,
+  $color-link-hover: inherit,
+  $font-weight: normal,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-weight: $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+
+  @include medium {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin heading-large(
+  $font-size: 1.2rem,
+  $line-height: 1.3rem,
+  $color: $color-heading,
+  $color-link: inherit,
+  $color-link-hover: inherit,
+  $font-weight: normal,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-weight: $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+
+  @include medium {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+}
+
+@mixin heading-medium(
+  $font-size: 0.8rem,
+  $line-height: 1.2rem,
+  $color: $color-heading,
+  $color-link: inherit,
+  $color-link-hover: inherit,
+  $font-weight: normal,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-weight: $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+
+  @include medium {
+    font-size: 1.2rem;
+    line-height: 1.25rem;
+  }
+}
+
+.h1 {
+  @include heading-xl;
+}
+
+.h2 {
+  @include heading-large;
+}
+
+.h3 {
+  @include heading-medium;
+}
+
+.text-long {
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+  }
+
+  h3 {
+    @extend .h3;
+  }
+}
