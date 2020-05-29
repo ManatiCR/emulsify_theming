@@ -8,7 +8,9 @@ $table-border: $gray-lightest;
   width: 100%;
   border-collapse: collapse;
 
-  @include margin-md;
+  @include margin-md (
+    $side: (top, bottom, left, right)
+  );
 }
 
 .table__heading-cell {
