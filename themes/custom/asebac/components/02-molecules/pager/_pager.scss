@@ -1,5 +1,7 @@
 .pager {
-  margin: 2em 0;
+  @include margin-md (
+    $side: (top, bottom)
+  );
 }
 
 .pager__items {
