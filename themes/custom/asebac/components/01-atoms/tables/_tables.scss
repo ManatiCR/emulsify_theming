@@ -1,0 +1,53 @@
+
+$table-border: $gray-lightest;
+
+.table {
+  background-color: $white;
+  border-radius: 0.25rem;
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+
+  @include margin-md;
+}
+
+.table__heading-cell {
+  color: $black;
+  text-align: left;
+  padding: $space-double $space;
+  padding-top: 0;
+
+  .h3 {
+    font-weight: bold;
+  }
+}
+
+.table__cell {
+  padding: $space;
+}
+
+.table__row {
+  color: $gray;
+  border-bottom: 1px solid $gray-lightest;
+
+  &:first-child {
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+
+.text-long {
+  table {
+    @extend .table;
+  }
+
+  td {
+    @extend .table__cell;
+  }
+
+  tr {
+    @extend .table__row;
+  }
+}
