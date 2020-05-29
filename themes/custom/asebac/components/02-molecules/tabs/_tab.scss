@@ -1,0 +1,21 @@
+.tabs__link,
+.tabs__link--local-tasks {
+  background-color: $gray-lightest;
+  color: $black;
+  display: block;
+  font-size: $font-medium;
+  padding: 0.62rem 1.4rem;
+  margin-right: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+
+  @include large {
+    display: flex;
+  }
+
+  &.is-active, &:hover {
+    background-color: $red;
+    color: $white;
+    text-decoration: none;
+  }
+}
