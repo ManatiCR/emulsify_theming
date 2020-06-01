@@ -6,7 +6,7 @@
   color: $color;
   padding: 0.5rem;
   width: 28rem;
-  @include margin-sm($side: (top, bottom));
+  @include margin-sm(top bottom);
 }
 
 @mixin notification-success {

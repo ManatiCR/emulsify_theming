@@ -55,9 +55,7 @@ $outer-container-break: $small;
 // Mixin - Margins
 
 /** Usage Example:
-@include margin-lg (
-  $side: (top, bottom)
-);
+  @include margin-lg (top bottom);
 **/
 @mixin margin-lg($side) {
   @each $side in $side {
