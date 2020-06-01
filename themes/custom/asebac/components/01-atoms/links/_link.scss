@@ -1,24 +1,14 @@
 /* Link */
-$color-link: $red;
-$color-link--hover: $red;
-
-@mixin link($color: $color-link) {
-  color: $color;
-}
-
-@mixin link-alt {
-  @include link($white);
-
-  color: $white;
-}
-
 .link {
-  @include link;
+  color: $red;
+
+  &:hover {
+    color: $red;
+  }
 }
 
 .link--alt {
-  @include link-alt;
-
+  color: $white;
   font-size: $font-small;
   font-weight: bold;
 
