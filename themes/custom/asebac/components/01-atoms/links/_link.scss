@@ -8,7 +8,7 @@ $color-link--hover: $red;
 
 @mixin link-alt {
   @include link($white);
-  
+
   color: $white;
 }
 

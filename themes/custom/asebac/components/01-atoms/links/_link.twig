@@ -6,7 +6,7 @@
 
 {% set link_base_class = link_base_class|default('link') %}
 
-<div class="wrapper"> 
+<div class="wrapper">
   {% for key, item in links %}
     <a
       class="link--alt{% if key == 0 %} is-active{% endif %}"
