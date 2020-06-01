@@ -1,0 +1,42 @@
+/* Link */
+$color-link: $red;
+$color-link--hover: $red;
+
+@mixin link($color: $color-link) {
+  color: $color;
+}
+
+@mixin link-alt {
+  @include link($white);
+  
+  color: $white;
+}
+
+.link {
+  @include link;
+}
+
+.link--alt {
+  @include link-alt;
+
+  font-size: $font-small;
+  font-weight: bold;
+
+  &.is-active, &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &.is-active {
+    font-size: $font-medium;
+  }
+
+  &:not(:first-child) {
+    @include margin-xs(left);
+  }
+}
+
+.wrapper {
+  background-color: $red-darker;
+  padding: 0.85rem 2rem;
+}
