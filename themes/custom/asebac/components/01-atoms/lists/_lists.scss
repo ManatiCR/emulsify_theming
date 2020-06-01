@@ -13,10 +13,11 @@ ul {
 
     li::before {
       content: "";
-      height: 0.3rem;
-      width: 0.3rem;
       background-color: $red;
       border-radius: 50%;
+      height: 0.6rem;
+      padding: 0.3rem;
+      width: 0.6rem;
 
       @include margin-xs(right);
     }
@@ -33,9 +34,9 @@ ul {
 }
 
 .list-item {
-  display: flex;
   align-content: flex-start;
-  align-items: center;
+  align-items: baseline;
+  display: flex;
 
   svg.icon {
     width: 10px;
