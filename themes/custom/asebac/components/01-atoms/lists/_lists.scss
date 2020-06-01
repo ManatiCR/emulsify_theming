@@ -1,0 +1,57 @@
+/* Mixin - list-reset
+ * Reset list item defaults when no margin, padding, list styles needed
+*/
+ul {
+  @include list-reset;
+
+  font-size: $font-medium;
+}
+
+.ul {
+  &--bullet {
+    color: $black;
+
+    li::before {
+      content: "";
+      height: 0.3rem;
+      width: 0.3rem;
+      background-color: $red;
+      border-radius: 50%;
+
+      @include margin-xs(right);
+    }
+  }
+
+  &--arrow {
+    color: $red;
+    text-decoration: underline;
+  }
+
+  a {
+    font-weight: normal;
+  }
+}
+
+.list-item {
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+
+  svg.icon {
+    width: 10px;
+    height: 10px;
+
+    @include margin-xs(right);
+  }
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+
+.text-long {
+  ol,
+  ul {
+    li {
+      @extend .list-item;
+    }
+  }
+}
