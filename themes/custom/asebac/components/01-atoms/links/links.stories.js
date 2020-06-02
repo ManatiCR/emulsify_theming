@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from '@storybook/client-api';
 
 import link from './link.twig';
 import linkNav from './_link.twig';
@@ -7,8 +6,6 @@ import linkNav from './_link.twig';
 import linkData from './link.yml';
 import linkNavData from './links.yml';
 import EmailData from './email.yml';
-
-import './links';
 
 /**
  * Storybook Definition.
@@ -24,6 +21,5 @@ export const Email = () => (
 );
 
 export const LinkNav = () => {
-  useEffect(() => Drupal.attachBehaviors(), []);
   return <div dangerouslySetInnerHTML={{ __html: linkNav(linkNavData) }} />;
 };

@@ -12,35 +12,20 @@
  */
 #}
 
-{# @TODO: Identify if both twig files and JS will be needed for the Drupal implementation. #}
-{# Drupal Specific #}
-{% if primary %}
-  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul class="tabs__nav tabs__nav--local-tasks">{{ primary }}</ul>
-{% endif %}
-{% if secondary %}
-  <h2>{{ 'Secondary tabs'|t }}</h2>
-  <ul>{{ secondary }}</ul>
-{% endif %}
-
-{# Component Library Specific (javascript version) #}
-{% if not primary %}
-{{ attach_library('asebac/tabs') }}
-  <div id="tabs" class="tabs no-js">
-    <ul class="tabs__nav">
-      {% for key, tab in tabs %}
-        {% include "@molecules/tabs/_tab.twig" with {
-          tab_link: "#tab-" ~ key,
-          tab_text: tab.tab_text,
-        } %}
-      {% endfor %}
-    </ul>
+<div id="tabs" class="tabs">
+  <ul class="tabs__nav">
     {% for key, tab in tabs %}
-      <div class="tabs__tab{% if key == 0 %} is-active{% endif %}">
-        <div id="tab-{{ key }}" class="tabs__content">
-          <p>{{ tab.tab_content }}</p>
-        </div>
-      </div>
+      {% include "@molecules/tabs/_tab.twig" with {
+        tab_link: "#tab-" ~ key,
+        tab_text: tab.tab_text,
+      } %}
     {% endfor %}
-  </div>
-{% endif %}
+  </ul>
+  {% for key, tab in tabs %}
+    <div class="tabs__tab{% if key == 0 %} is-active{% endif %}">
+      <div id="tab-{{ key }}" class="tabs__content">
+        <p>{{ tab.tab_content }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
