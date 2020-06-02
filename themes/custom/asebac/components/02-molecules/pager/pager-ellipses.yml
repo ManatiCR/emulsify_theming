@@ -2,7 +2,9 @@ current: 5
 ellipses:
   next: true
 items:
-  next: true
+  next: {
+    text: 'Siguiente'
+  }
   pages: {
     1: { href: '#' },
     2: { href: '#' },

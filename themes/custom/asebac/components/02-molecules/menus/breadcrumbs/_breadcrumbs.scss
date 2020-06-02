@@ -1,6 +1,6 @@
-$color-breadcrumb: $gray-dark;
-$color-breadcrumb-hover: $gray-darker;
-$color-breadcrumb-active: $gray;
+$color-breadcrumb: $red;
+$color-breadcrumb-hover: $red-light;
+$color-breadcrumb-active: $red;
 
 .breadcrumb {
   @include list-reset;
@@ -12,23 +12,34 @@ $color-breadcrumb-active: $gray;
 .breadcrumb__link:visited,
 .breadcrumb__link:focus {
   color: $color-breadcrumb;
-  text-decoration: none;
 }
 
 .breadcrumb__link:hover {
   color: $color-breadcrumb-hover;
+  font-weight: normal;
 }
 
 .breadcrumb__item {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: $font-medium;
+
+  a {
+    text-decoration: underline;
+  }
 
   &::after {
     content: '/';
+    display:inline-block;
+    margin-left: 0.1rem;
   }
 
   &:last-child {
     color: $color-breadcrumb-active;
+    font-weight: bold;
+
+    a {
+      text-decoration: none;
+    }
 
     &::after {
       content: '';

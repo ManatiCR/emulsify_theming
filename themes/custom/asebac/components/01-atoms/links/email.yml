@@ -1,0 +1,4 @@
+link_url: 'mailto:someone@example.com'
+link_content: 'n.sandoval@asebac.com'
+link_attributes:
+  'target': '_blank'

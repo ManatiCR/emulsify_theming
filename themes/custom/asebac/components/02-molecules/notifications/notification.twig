@@ -1,0 +1,13 @@
+
+{% set notification_base_class = notification_base_class|default('notification') %}
+
+{% for item in notification %}
+    <div {{ bem(notification_base_class, item.notification_modifier, notification_blockname)}}>
+        {% if item.status == 'success' %}
+            <p>{{item.message}} </p>
+        {% endif %}
+        {% if item.status == 'error' %}
+            <p>{{item.message}} </p>
+        {% endif %}
+    </div>
+{% endfor %}

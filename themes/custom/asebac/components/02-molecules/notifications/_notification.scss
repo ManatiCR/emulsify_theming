@@ -1,0 +1,32 @@
+@mixin notification(
+  $bg: $gray-lightest,
+  $color: $red,
+){
+  background-color: $bg;
+  color: $color;
+  padding: 0.5rem;
+  width: 28rem;
+  @include margin-sm(top bottom);
+}
+
+@mixin notification-success {
+  border-left: 0.4rem solid $green;
+}
+
+@mixin notification-error {
+  border-left: 0.4rem solid $red-light;
+}
+
+.notification {
+  @include notification;
+
+  &--success {
+    @include notification;
+    @include notification-success;
+  }
+
+  &--error {
+    @include notification;
+    @include notification-error;
+  }
+}

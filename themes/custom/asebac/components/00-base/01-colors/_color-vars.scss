@@ -1,17 +1,21 @@
 // Grayscale
 $white: white;
 $near-white: #f2f2f2;
-$gray-lightest: #e5e5e5;
+$gray-lightest: #e6e6e6;
 $gray-lighter: #ccc;
 $gray-light: #888;
-$gray: #666;
+$gray: #6d6e71;
 $gray-dark: #4c4c4c;
 $gray-darker: #333;
 $black: black;
 
 // Project
-$green: #35aa4d;
-$blue: #4180c7;
+$red: #76232f;
+$red-light: #b4454f;
+$red-lighter: #cf655e;
+$red-darker: #3c2e34;
+
+$green: #2a9446;
 
 // Styleguide
 .sg-colors {
@@ -64,12 +68,20 @@ $blue: #4180c7;
     background-color: $black;
   }
 
-  &--green {
-    background-color: $green;
+  &--red {
+    background-color: $red;
   }
 
-  &--blue {
-    background-color: $blue;
+  &--red-light {
+    background-color: $red-light;
+  }
+
+  &--red-lighter {
+    background-color: $red-lighter;
+  }
+
+  &--red-darker {
+    background-color: $red-darker;
   }
 }
 

@@ -13,10 +13,22 @@
  */
 #}
 {% set li_base_class = li_base_class|default('list-item') %}
+{% set li_icon = li_modifiers[0] == 'arrow' %}
 
 <li {{ bem(li_base_class, li_modifiers, li_blockname) }}>
   {% block list_item_content %}
-    {% if list_item_label %}<strong>{{ list_item_label }}</strong> {% endif %}
-    {{ list_item_content }}
+    {# List Marker #}
+    {% if li_icon %}
+      {% include "@atoms/images/icons/_icon.twig" with {
+        icon_name: 'arrow',
+      } %}
+    {% endif %}
+    {# List Link #}
+    {% if list_item_url %}
+      <a href={{ list_item_url }}>{{ list_item_content }}</a>
+    {% else %}
+    {# List Content #}
+      {{ list_item_content }}
+    {% endif %}
   {% endblock %}
 </li>

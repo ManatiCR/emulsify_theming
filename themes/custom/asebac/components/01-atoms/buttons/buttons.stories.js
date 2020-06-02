@@ -1,29 +1,34 @@
 import React from 'react';
 
-import Button from './react/Button.component';
+import button from './button.twig';
 
-import button from './twig/button.twig';
-
-import buttonData from './twig/button.yml';
-import buttonAltData from './twig/button-alt.yml';
-import buttonAlt2Data from './twig/button-alt2.yml';
+import buttonData from './button.yml';
+import buttonAltData from './button-alt.yml';
+import buttonOutlineData from './button-outline.yml';
+import buttonDownloadData from './button-download.yml';
+import buttonLinkData from './button-link.yml';
 
 /**
  * Storybook Definition.
  */
-export default {
-  component: Button,
-  title: 'Atoms/Button',
-};
+export default { title: 'Atoms/Button' };
 
-export const react = () => <Button>React Button</Button>;
-
-export const twig = () => (
+export const example = () => (
   <div dangerouslySetInnerHTML={{ __html: button(buttonData) }} />
 );
-export const twigAlt = () => (
+
+export const exampleAlt = () => (
   <div dangerouslySetInnerHTML={{ __html: button(buttonAltData) }} />
 );
-export const twigAlt2 = () => (
-  <div dangerouslySetInnerHTML={{ __html: button(buttonAlt2Data) }} />
+
+export const exampleOutline = () => (
+  <div dangerouslySetInnerHTML={{ __html: button(buttonOutlineData) }} />
+);
+
+export const exampleDownload = () => (
+  <div dangerouslySetInnerHTML={{ __html: button(buttonDownloadData) }} />
+);
+
+export const exampleLink = () => (
+  <div dangerouslySetInnerHTML={{ __html: button(buttonLinkData) }} />
 );

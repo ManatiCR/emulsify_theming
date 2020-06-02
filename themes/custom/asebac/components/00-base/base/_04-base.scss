@@ -22,3 +22,17 @@ html {
   width: 1px;
   word-wrap: normal;
 }
+
+a {
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  &[href^="mailto:"] {
+    text-decoration: underline;
+  }
+}

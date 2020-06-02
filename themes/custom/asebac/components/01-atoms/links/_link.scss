@@ -1,0 +1,32 @@
+/* Link */
+.link {
+  color: $red;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.link--alt {
+  color: $white;
+  font-size: $font-small;
+  font-weight: bold;
+
+  &.is-active, &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &.is-active {
+    font-size: $font-medium;
+  }
+
+  &:not(:first-child) {
+    @include margin-xs(left);
+  }
+}
+
+.wrapper {
+  background-color: $red-darker;
+  padding: 0.85rem 2rem;
+}

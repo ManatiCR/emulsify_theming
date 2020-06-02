@@ -1,0 +1,9 @@
+notification:
+  - status: 'success'
+    message: 'Caches cleared.'
+    notification_modifier:
+      - 'success'
+  - status: 'error'
+    message: 'Could not cleared caches.'
+    notification_modifier:
+      - 'error'

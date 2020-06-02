@@ -1,26 +1,43 @@
+/* eslint-disable camelcase */
 import React from 'react';
 
-import headings from './headings/headings.twig';
-import blockquote from './text/02-blockquote.twig';
-import pre from './text/05-pre.twig';
-import paragraph from './text/03-inline-elements.twig';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
-import blockquoteData from './text/blockquote.yml';
+import headings from './headings.twig';
+import blockquote from './blockquote.twig';
+import paragraph from './paragraph.twig';
+
+import blockquoteData from './blockquote.yml';
+import blockquoteDataLarge from './blockquote-large.yml';
 
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Text' };
+export default { title: 'Atoms/Text', decorators: [withKnobs] };
 
-export const headingsExamples = () => (
-  <div dangerouslySetInnerHTML={{ __html: headings({}) }} />
-);
+// Heading Example
+export const headingsExamples = () => {
+  const textExample = text('Heading Example', 'Heading Example');
+  return (
+    <div dangerouslySetInnerHTML={{ __html: headings({ textExample }) }} />
+  );
+};
+
+// Paragraph Example
+export const ParagraphExample = () => {
+  const paragraph_content = text('Paragraph Example', 'Paragraph Example');
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: paragraph({ paragraph_content }) }}
+    />
+  );
+};
+
 export const blockquoteExample = () => (
   <div dangerouslySetInnerHTML={{ __html: blockquote(blockquoteData) }} />
 );
-export const preformatted = () => (
-  <div dangerouslySetInnerHTML={{ __html: pre({}) }} />
-);
-export const random = () => (
-  <div dangerouslySetInnerHTML={{ __html: paragraph({}) }} />
+
+// Blockquote Large Example
+export const blockquoteLargeExample = () => (
+  <div dangerouslySetInnerHTML={{ __html: blockquote(blockquoteDataLarge) }} />
 );
