@@ -3,6 +3,11 @@ global:
     theme:
       dist/style.css: {}
 
+fonts:
+  css:
+    theme:
+      fonts/fonts.css: {}
+
 main-menu:
   js:
     dist/js/02-molecules/menus/main-menu/main-menu.js: {}
