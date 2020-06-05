@@ -179,3 +179,62 @@ $outer-container-break: $small;
     }
   }
 }
+
+// Mixin - Paddings
+
+/** Usage Example:
+  @include padding-lg (top bottom);
+**/
+@mixin padding-xxl($side) {
+  @each $side in $side {
+    padding-#{$side}: 3rem;
+
+    @include medium {
+      padding-#{$side}: 5rem;
+    }
+  }
+}
+
+@mixin padding-xl($side) {
+  @each $side in $side {
+    padding-#{$side}: 1.25rem;
+
+    @include medium {
+      padding-#{$side}: 4.3rem;
+    }
+  }
+}
+
+@mixin padding-lg($side) {
+  @each $side in $side {
+    padding-#{$side}: 3rem;
+  }
+}
+
+@mixin padding-md($side) {
+  @each $side in $side {
+    padding-#{$side}: 1.25rem;
+
+    @include medium {
+      padding-#{$side}: 2.5rem;
+    }
+  }
+}
+
+@mixin padding-sm($side) {
+  @each $side in $side {
+    padding-#{$side}: 1.8rem;
+  }
+}
+
+@mixin padding-xs($side) {
+  @each $side in $side {
+    padding-#{$side}: 1.25rem;
+  }
+}
+
+@mixin padding-xxs($side) {
+  @each $side in $side {
+    padding-#{$side}: 0.625rem;
+  }
+}
