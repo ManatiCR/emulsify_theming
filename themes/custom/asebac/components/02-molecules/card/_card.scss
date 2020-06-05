@@ -1,33 +1,77 @@
-.card__heading {
-  @include heading-large($font-size: 1.3rem);
-  @include no-bottom;
-
-  &-link {
-    @include link;
-  }
+@mixin card($color: $black, $bg: $white) {
+    width: 100%;
+    color: $color;
+    background-color: $bg;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.25);
+    @include padding-sm(top bottom);
 }
 
-.card__subheading {
-  @include heading-medium($font-size: 1rem);
-  @include no-bottom;
+.card__container {
+    @include padding-xs(top left bottom right);
+    
+    @include medium {
+        display: inline-block;
+        text-align: initial;
+    }
+}
 
-  color: $gray;
+.card__heading {
+    @include heading-large;
+    @include margin-sm(bottom);
+
+    font-weight: bold;
+
+    &--underline {
+        text-decoration: underline;
+    }
 }
 
 .card__body {
-  margin: 0.7em 0 1em;
+    @include paragraph;
+    @include margin-sm(bottom);
+
+    .subtext {
+        @include margin-xs(top);
+        @include margin-md(bottom);
+
+        font-size: $font-small;
+    }
+
+    & .divider {
+        width: 100%;
+        @include margin-md(bottom);
+    }
+
+    & .divider:last-of-type {
+        display: none;
+    }
 }
 
-.card__link {
-  @include link;
+.card__cta {
+    display: inline-flex;;
+    flex-direction: column;
+    text-align: center;
+
+    & .button:not(:first-child) {
+        @include margin-xs(top);
+    }
 }
 
-.card__button {
-  @include button;
-}
+.card {
+    @include card;
 
-/* Variations */
-.card--bg {
-  background-color: $gray-lightest;
-  padding: 1em;
+    &--alt {
+        @include card($bg: $red);
+
+        display: inline-block;
+        text-align: initial;
+    
+        .card__heading, .card__body {
+           color: $white;
+        }
+    }
+    
+    &--outline {
+        border: 2px solid $gray-lightest;
+    }
 }
