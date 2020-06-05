@@ -238,3 +238,28 @@ $outer-container-break: $small;
     padding-#{$side}: 0.625rem;
   }
 }
+
+// Mixin - Responsive Buttons
+@mixin responsive-buttons {
+  display: inline-flex;
+  flex-direction: column;
+
+  .button {
+    &:not(:last-child) {
+      @include margin-xs(bottom);
+    }
+  }
+
+  @include medium {
+    flex-direction: row;
+
+    .button {
+      &:not(:last-child) {
+        @include margin-sm(bottom);
+      }
+
+      @include margin-xxs(right);
+      @include margin-sm(bottom);
+    }
+  }
+}
