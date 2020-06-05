@@ -17,3 +17,5 @@ items:
     value: 'compras'
   - name: 'Descargar'
     value: 'descargar'
+  - name: 'Arrow'
+    value: 'arrow'
