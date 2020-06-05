@@ -1,0 +1,52 @@
+.banner {
+  background-color: $red;
+  display: flex;
+  flex-direction: column;
+
+  @include medium {
+    flex-direction: row-reverse;
+  }
+}
+
+.banner__image {
+  flex: 1;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.banner__content {
+  flex: 1;
+
+  // Heading
+  .heading {
+    @include heading-xl($color: $white, $margin: 0);
+  }
+
+  // Paragraph
+  @include paragraph($white);
+
+  // Content
+  @include padding-lg(top bottom);
+  @include padding-xl(left right);
+
+  // Breakpoint
+  @include medium {
+    @include padding-lg(top);
+    @include no-bottom;
+  }
+}
+
+.banner__description {
+  @include padding-xs(top);
+  @include padding-sm(bottom);
+}
+
+.banner__button-container {
+  @include responsive-buttons;
+}
