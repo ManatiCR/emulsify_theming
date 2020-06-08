@@ -14,8 +14,8 @@
   img {
     display: block;
     height: 100%;
-    object-fit: cover;
     max-width: 100%;
+    object-fit: cover;
     width: 100%;
   }
 }
@@ -27,9 +27,6 @@
   .heading {
     @include heading-xl($color: $white, $margin: 0);
   }
-
-  // Paragraph
-  @include paragraph($white);
 
   // Content
   @include padding-lg(top bottom);
@@ -43,6 +40,9 @@
 }
 
 .banner__description {
+  // Paragraph
+  @include paragraph($white);
+
   @include padding-xs(top);
   @include padding-sm(bottom);
 }

@@ -30,9 +30,9 @@
   <div {{ bem('content', '', banner__base_class) }}>
     {# Heading #}
     {% if banner__heading %}
-      <{{banner__title_element}} {{bem('heading')}}>
+      <{{banner__title_element}} {{bem('heading')}} >
         {{banner__heading}}
-      </{{banner__title_element}}>
+      </{{banner__title_element}} >
     {% endif %}
     {# Description #}
     {% if banner__description %}

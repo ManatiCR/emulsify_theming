@@ -5,7 +5,7 @@
   $hoverColor: $white,
   $iconColor: $white,
   $iconHoverColor: $white
-) {
+  ) {
   background-color: $bg;
   border: none;
   color: $color;
@@ -18,11 +18,11 @@
   text-decoration: none;
   text-align: center;
   border-radius: 0.2rem;
-  justify-content: center;
 
   &:visited {
     color: $color;
   }
+
   &:hover {
     font-weight: initial;
     text-decoration: none;
