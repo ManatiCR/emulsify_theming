@@ -14,9 +14,3 @@ card__buttons:
       - 'arrow'
     modifiers:
       - 'alt-red'
-  - content: 'Contacto'
-    url: '#'
-    icon:
-      - 'arrow'
-    modifiers:
-      - 'alt-red'
