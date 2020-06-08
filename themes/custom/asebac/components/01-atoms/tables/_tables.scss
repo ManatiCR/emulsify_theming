@@ -7,32 +7,62 @@ $table-border: $gray-lightest;
   border-spacing: 0;
   width: 100%;
   border-collapse: collapse;
-
-  @include margin-md(top bottom left right);
 }
 
-.table__heading-cell {
-  color: $black;
+.table__title {
   text-align: left;
-  padding: $space-double $space;
-  padding-top: 0;
+  padding: $space;
 
-  .h3 {
+  .h2 {
+    color: $black;
     font-weight: 600;
+  }
+
+  @include medium {
+    padding: $space-double $space;
   }
 }
 
-.table__cell {
-  padding: $space;
+.table__heading {
+  display: none;
+  text-align: left;
+
+  & .table__cell { 
+    padding: $space;
+    color: $black;
+  };
+
+  @include medium {
+    display: table-row;
+  }
 }
 
 .table__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: $gray;
-  border-bottom: 1px solid $gray-lightest;
+  
+  @include medium {
+    display: table-row;
+  }
+}
 
-  &:first-child {
+.table__heading, .table__row {
+  border-bottom: 1px solid $gray-lightest;
+}
+
+.table__row .table__cell {
+  padding: $space;
+
+  &:first-of-type {
     color: $black;
     font-weight: 600;
+
+    @include medium {
+      color: $gray;
+      font-weight: normal;
+    }
   }
 }
 
