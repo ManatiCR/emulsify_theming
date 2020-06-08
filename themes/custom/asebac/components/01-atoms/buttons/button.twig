@@ -29,8 +29,7 @@
   {% set additional_attributes = additional_attributes|merge({'id': button_id}) %}
 {% endif %}
 
-
-<{{button_element}} {{ add_attributes(additional_attributes) }}>
+<{{button_element}} {{ add_attributes(additional_attributes) }} >
   {% block button_content %}
     {{ button_content }}
   {% endblock %}
