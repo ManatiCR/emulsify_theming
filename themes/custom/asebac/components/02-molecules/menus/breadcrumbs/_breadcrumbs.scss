@@ -35,7 +35,7 @@ $color-breadcrumb-active: $red;
 
   &:last-child {
     color: $color-breadcrumb-active;
-    font-weight: bold;
+    font-weight: 600;
 
     a {
       text-decoration: none;
