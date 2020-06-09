@@ -1,5 +1,5 @@
 /* Link */
-.link {
+@mixin link {
   color: $red;
 
   &:hover {
@@ -7,12 +7,17 @@
   }
 }
 
+.link {
+  @include link;
+}
+
 .link--alt {
   color: $white;
   font-size: $font-small;
   font-weight: bold;
 
-  &.is-active, &:hover {
+  &.is-active,
+  &:hover {
     color: $white;
     text-decoration: underline;
   }
