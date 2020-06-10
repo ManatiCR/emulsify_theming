@@ -1,0 +1,13 @@
+.block {
+  width: 100%;
+}
+
+.block__heading {
+  @include heading-xl($font-weight: 600, $margin: 0);
+
+  @include margin-xs(bottom);
+
+  @include medium {
+    @include margin-sm(bottom);
+  }
+}

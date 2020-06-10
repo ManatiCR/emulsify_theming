@@ -1,0 +1,27 @@
+{#
+/**
+ * Available variables:
+ * - blockquote_base_class - the base classname
+ * - blockquote_modifiers - array of modifiers to add to the base classname
+ * - blockquote_blockname - blockname prepended to the base classname
+ * - blockquote_url - the url this blockquote should point to
+ * - blockquote_content - the content of the blockquote (typically text)
+ *
+ * Available blocks:
+ * - blockquote_content - used to replace the content of the blockquote with something other than text
+ *   for example: A formatted text field in Drupal
+ */
+#}
+
+{% set block_base_class = block_base_class|default('block') %}
+
+<div {{ bem(block_base_class, block_modifiers, block_blockname) }}>
+  {% if block_heading %}
+    <{{block_heading_element}} {{ bem('heading', block_modifiers, block_base_class) }}>
+        {{ block_heading }}
+    </{{block_heading_element}}>
+  {% endif %}
+  {% block content %}
+    {{ block_content }}
+  {% endblock %}
+</div>
