@@ -1,6 +1,6 @@
 name: asebac
 type: theme
-description: Theme based on <a href="http://emulsify.info">Emulsify</a>. 
+description: Theme based on <a href="http://emulsify.info">Emulsify</a>.
 base theme: stable
 core: 8.x
 
@@ -56,6 +56,3 @@ component-libraries:
   templates:
     paths:
       - components/04-templates
-  pages:
-    paths:
-      - components/05-pages
