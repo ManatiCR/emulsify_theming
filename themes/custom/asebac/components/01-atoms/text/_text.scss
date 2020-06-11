@@ -29,7 +29,7 @@ body {
 @mixin blockquote($color: $color-text) {
   color: $color;
   font-size: $font-medium;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.18rem;
   text-align: center;
 }
