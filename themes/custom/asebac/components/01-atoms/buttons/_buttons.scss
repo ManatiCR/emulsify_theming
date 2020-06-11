@@ -2,7 +2,9 @@
   $bg: $white,
   $color: $red,
   $hoverBg: $red,
-  $hoverColor: $white
+  $hoverColor: $white,
+  $iconColor: $white,
+  $iconHoverColor: $white
 ) {
   background-color: $bg;
   border: none;
@@ -10,7 +12,9 @@
   cursor: pointer;
   line-height: 1.4;
   padding: $space-one-half 1.25rem;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-align: center;
   border-radius: 0.2rem;
@@ -20,55 +24,61 @@
   }
 
   &:hover {
+    font-weight: initial;
+    text-decoration: none;
     background-color: $hoverBg;
     color: $hoverColor;
+
+    .button__icon {
+      fill: $iconHoverColor;
+    }
   }
-  
-  i &__icon {
+
+  i {
+    display: flex;
+    align-items: center;
+  }
+
+  i .button__icon {
     height: 0.9rem;
     width: 0.9rem;
     margin-left: 0.5rem;
+    fill: $iconColor;
   }
-}
-
-@mixin button-alt {
-  @include button($red, $white, $red-lighter);
-}
-
-@mixin button-outline {
-  @include button($red, $red, $red, $white);
-
-  background-color: transparent;
-  border: 2px solid $red;
-}
-
-@mixin button-download {
-  @include button($gray, $white, $red-darker, $white);
-}
-
-@mixin button-link {
-  @include button($white, $red, $white, $red-light);
-
-  text-decoration: underline;
 }
 
 .button {
   @include button;
 
   &--alt {
-    @include button;
-    @include button-alt;
+    @include button($red, $white, $red-lighter);
+  }
+
+  &--alt-red {
+    @include button($white, $red, $red-lighter, $white, $red, $white);
   }
 
   &--outline {
-    @include button-outline;
+    @include button($red, $red, $red, $white);
+
+    background-color: transparent;
+    border: 2px solid $red;  
+  }
+
+  &--outline-alt {
+    @include button($red, $white, $red-lighter, $white);
+
+    background-color: transparent;
+    border: 2px solid $white;  
   }
 
   &--download {
-    @include button-download;
+    @include button($gray, $white, $red-darker, $white);
   }
 
   &--link {
-    @include button-link;
+    @include button($white, $red, $white, $red-light);
+
+    text-decoration: underline;
   }
 }

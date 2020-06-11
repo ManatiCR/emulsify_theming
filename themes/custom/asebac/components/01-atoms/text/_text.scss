@@ -18,7 +18,7 @@ body {
 @mixin paragraph($color: $color-text) {
   color: $color;
   font-size: $font-medium;
-  line-height: 0.9rem;
+  line-height: 1rem;
 }
 
 .paragraph {
