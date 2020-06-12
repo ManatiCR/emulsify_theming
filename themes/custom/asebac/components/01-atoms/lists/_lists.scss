@@ -15,9 +15,7 @@ ul {
       content: "";
       background-color: $red;
       border-radius: 50%;
-      height: 0.6rem;
-      padding: 0.3rem;
-      width: 0.6rem;
+      padding: 0.25rem;
 
       @include margin-xs(right);
     }
@@ -26,6 +24,14 @@ ul {
   &--arrow {
     color: $red;
     text-decoration: underline;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: $red;
+
+      @include margin-xs(right);
+    }
   }
 
   a {
@@ -37,13 +43,6 @@ ul {
   align-content: flex-start;
   align-items: baseline;
   display: flex;
-
-  svg.icon {
-    width: 10px;
-    height: 10px;
-
-    @include margin-xs(right);
-  }
 }
 
 /* TODO: BEM selectors should be applied to wysiwyg-created content */

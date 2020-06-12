@@ -5,7 +5,7 @@
   $hoverColor: $white,
   $iconColor: $white,
   $iconHoverColor: $white
-) {
+  ) {
   background-color: $bg;
   border: none;
   color: $color;
@@ -62,14 +62,14 @@
     @include button($red, $red, $red, $white);
 
     background-color: transparent;
-    border: 2px solid $red;  
+    border: 2px solid $red;
   }
 
   &--outline-alt {
     @include button($red, $white, $red-lighter, $white);
 
     background-color: transparent;
-    border: 2px solid $white;  
+    border: 2px solid $white;
   }
 
   &--download {

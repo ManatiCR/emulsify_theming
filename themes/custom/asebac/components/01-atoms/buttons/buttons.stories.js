@@ -4,6 +4,7 @@ import button from './button.twig';
 
 import buttonData from './button.yml';
 import buttonAltData from './button-alt.yml';
+import buttonAltDataRed from './button-alt-red.yml';
 import buttonOutlineData from './button-outline.yml';
 import buttonDownloadData from './button-download.yml';
 import buttonLinkData from './button-link.yml';
@@ -19,6 +20,10 @@ export const example = () => (
 
 export const exampleAlt = () => (
   <div dangerouslySetInnerHTML={{ __html: button(buttonAltData) }} />
+);
+
+export const exampleAltRed = () => (
+  <div dangerouslySetInnerHTML={{ __html: button(buttonAltDataRed) }} />
 );
 
 export const exampleOutline = () => (

@@ -1,0 +1,59 @@
+{#
+  # Available variables:
+  # - banner__base_class - base classname of the wrapper.
+  # - banner__modifiers - array of modifiers to add to the base classname of the wrapper.
+
+  # - banner__image__src - the actual image file location.
+  # - banner__image__alt - the alt text for screen readers and when the image cannot load.
+
+  # - banner__title_element - the controlling element tag.
+  # - banner__heading - the content of the heading.
+  # - banner__description - the content of the description.
+
+  # - banner__button__content - the content of the button component.
+  # - banner__button__icon - the icon used as part of the button content.
+  # - banner__button__url - the url the button should link to.
+  # - banner__button__modifiers - array of modifiers to add to the base classname of the button.
+  # - banner__button__type - the controlling element tag (button or link).
+#}
+
+{% set banner__base_class = 'banner' %}
+
+<div {{ bem(banner__base_class, banner__modifiers)}}>
+  {# Image #}
+  {% block banner__img %}
+    <div {{ bem('image', '', banner__base_class) }}>
+      <img src={{banner__image__src}} />
+    </div>
+  {% endblock %}
+  {# Content #}
+  <div {{ bem('content', '', banner__base_class) }}>
+    {# Heading #}
+    {% if banner__heading %}
+      <{{banner__title_element}} {{bem('heading')}} >
+        {{banner__heading}}
+      </{{banner__title_element}} >
+    {% endif %}
+    {# Description #}
+    {% if banner__description %}
+      <p class='banner__description'>
+        {{banner__description}}
+      </p>
+    {% endif %}
+    {# Button Container #}
+    {% if buttons %}
+      <div {{ bem('button-container', banner__content__modifiers, banner__base_class) }}>
+        {% for button in buttons %}
+          {# Buttons #}
+          {% include "@atoms/buttons/button.twig" with {
+            button_content: button.banner__button__content,
+            button_url: button.banner__button__url,
+            button_modifiers: banner__button__modifiers,
+            button_type: banner__button__type,
+            button_icon: banner__button__icon
+          } %}
+        {% endfor %}
+      </div>
+  {% endif %}
+  </div>
+</div>
